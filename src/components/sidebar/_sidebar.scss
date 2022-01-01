@@ -8,10 +8,18 @@
   position: sticky;
   top: 10vh;
   left: 0;
+  a {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
   li {
     display: flex;
     padding: 0.8rem 2rem;
-    cursor: pointer;
+    // cursor: pointer;
     &:hover {
       background-color: $border-color;
     }

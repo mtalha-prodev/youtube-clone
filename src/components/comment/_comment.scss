@@ -1,0 +1,30 @@
+.comment {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-bottom: 0.2px solid #353946;
+  padding-bottom: 20px;
+  padding-top: 5px;
+
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+
+  &__body {
+    margin-left: 10px;
+    &__heading {
+      display: flex;
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      span {
+        margin-left: 5px;
+      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

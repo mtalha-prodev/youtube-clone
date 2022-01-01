@@ -1,0 +1,61 @@
+@import "../../_base.scss";
+
+.metadata {
+  &__top {
+    color: white;
+    padding: 5px 0;
+    h5 {
+      color: $text-color;
+    }
+    span {
+      color: $text-color;
+    }
+  }
+  &__channel {
+    // margin: 20px 0;
+    padding: 20px 0;
+    border-top: 0.2px solid $border-color;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    p {
+      margin-bottom: 0;
+      text-transform: capitalize;
+      color: $text-color;
+    }
+    button {
+      background-color: red;
+      text-transform: uppercase;
+      border-radius: 0;
+      font-size: 15px;
+      border: none;
+      color: #fff;
+      padding: 5px 10px;
+      &.btn-gray {
+        background-color: gray;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    border-bottom: 0.2px solid $border-color;
+    white-space: pre-line;
+    padding-bottom: 15px;
+    text-align: justify;
+
+    .showMoreText {
+      width: 100px;
+      display: block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+}

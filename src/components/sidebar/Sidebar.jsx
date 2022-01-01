@@ -8,6 +8,7 @@ import {
   MdSentimentDissatisfied,
 } from "react-icons/md";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { logOut } from "../../redux/actions/auth.action";
 
 import "./_sidebar.scss";
@@ -24,14 +25,19 @@ const Sidebar = ({ sidebar, sidebarToggle }) => {
       className={sidebar ? "sidebar open" : "sidebar"}
       onClick={() => sidebarToggle(false)}
     >
-      <li>
-        <MdHome size={23} />
-        <span>Home</span>
-      </li>
-      <li>
-        <MdSubscriptions size={23} />
-        <span>Subscriptions</span>
-      </li>
+      <Link to="/">
+        <li>
+          <MdHome size={23} />
+          <span>Home</span>
+        </li>
+      </Link>
+
+      <Link to="/feed/subscriptions">
+        <li>
+          <MdSubscriptions size={23} />
+          <span>Subscriptions</span>
+        </li>
+      </Link>
       <li>
         <MdThumbUp size={23} />
         <span>Liked</span>

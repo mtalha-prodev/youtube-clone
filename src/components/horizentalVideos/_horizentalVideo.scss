@@ -1,0 +1,62 @@
+@import "../../_base.scss";
+
+.horizentalVideo {
+  cursor: pointer;
+  &__left {
+    position: relative;
+    text-align: center;
+    padding-left: 0 !important;
+  }
+
+  &__thumbnail {
+    width: 100%;
+    &-channel {
+      width: 50%;
+      border-radius: 50%;
+    }
+
+    &-wrapper {
+      width: 100%;
+    }
+  }
+  &__duration {
+    position: absolute;
+
+    bottom: 0.6rem;
+    right: 1.2rem;
+
+    font-size: 0.9rem;
+    padding: 0.2rem;
+    background: #080808ec;
+    border-radius: 3px;
+  }
+  &__right {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    p {
+      margin-bottom: 0;
+    }
+    &__title {
+      font-size: 0.8rem;
+      // font-weight: 600;
+      color: #fff;
+      @include line-clamp(2);
+    }
+
+    .video__detail {
+      font-size: 0.8rem;
+    }
+    .des {
+      @include line-clamp(1);
+    }
+    .views {
+      font-size: 0.7rem;
+      @include line-clamp(1);
+    }
+    .channel {
+      @include line-clamp(2);
+    }
+  }
+}

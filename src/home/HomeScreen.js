@@ -4,8 +4,9 @@ import InfiniteScroll from "react-infinite-scroll-component";
 // import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { useDispatch, useSelector } from "react-redux";
 import Categories from "../components/categories/Categories";
-import SkeletonVideo from "../components/skeleton/SkeletonVideo";
 import Videos from "../components/videos/Video";
+import ContentLoader from "react-content-loader";
+
 import {
   getPopularVideo,
   getVideosByCategories,

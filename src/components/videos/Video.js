@@ -6,8 +6,11 @@ import moment from "moment";
 import numeral from "numeral";
 
 import "./_video.scss";
+import { useNavigate } from "react-router";
 
-const Video = ({ video }) => {
+const Video = ({ video, channelScreen }) => {
+  const navigate = useNavigate();
+
   // destroctures to video all using data sent props
   const {
     id,
@@ -18,6 +21,7 @@ const Video = ({ video }) => {
       publishedAt,
       thumbnails: { medium },
     },
+    contentDetails,
   } = video;
 
   const [views, setViews] = useState(null);
@@ -28,7 +32,7 @@ const Video = ({ video }) => {
   const seconds = moment.duration(duration).asSeconds();
   const _duration = moment.utc(seconds * 1000).format("mm:ss");
 
-  const _videoId = id?.videoId || id;
+  const _videoId = id?.videoId || contentDetails?.videoId || id;
 
   useEffect(() => {
     const getVideoDetails = async () => {
@@ -65,25 +69,30 @@ const Video = ({ video }) => {
     getChannelIcons();
   }, [channelId]);
 
+  const handleWatchVideo = () => {
+    navigate(`/watch/${_videoId}`);
+  };
+
   return (
-    <div className="video">
+    <div className="video" onClick={handleWatchVideo}>
       <div className="video__content">
-        {/* <img src={medium.url} alt="video" /> */}
         <LazyLoadImage src={medium.url} effect="blur" />
         <span className="video__content__duration">{_duration}</span>
       </div>
       <div className="video__title">{title}</div>
       <div className="video__details">
         <span>
-          <AiFillEye /> {numeral(views).format("0.a")} Views .
+          <AiFillEye /> {numeral(views).format("0.a")} Views
         </span>
         <span>{moment(publishedAt).fromNow()}</span>
       </div>
-      <div className="video__channel">
-        {/* <img src={channelIcon?.url} alt="" /> */}
-        <LazyLoadImage src={channelIcon?.url} effect="blur" />
-        <p>{channelTitle}</p>
-      </div>
+      {/* channel name and img  */}
+      {!channelScreen && (
+        <div className="video__channel">
+          <LazyLoadImage src={channelIcon?.url} effect="blur" />
+          <p>{channelTitle}</p>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,9 +1,53 @@
+// user login auth system
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAIL = "LOGIN_FAIL";
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOG_OUT = "LOG_OUT";
 export const LOAD_PROFILE = "LOAD_PROFILE";
 
+// home video
 export const HOME_REQUEST = "HOME_REQUEST";
 export const HOME_SUCCESS = "HOME_SUCCESS";
 export const HOME_FAIL = "HOME_FAIL";
+
+// selected watching video
+export const SELECTED_VIDEO_REQUEST = "SELECTED_VIDEO_REQUEST";
+export const SELECTED_VIDEO_SUCCESS = "SELECTED_VIDEO_SUCCESS";
+export const SELECTED_VIDEO_FAIL = "SELECTED_VIDEO_FAIL";
+
+// channel details
+export const CHANNEL_DETAILS_REQUEST = "CHANNEL_DETAILS_REQUEST";
+export const CHANNEL_DETAILS_SUCCESS = "CHANNEL_DETAILS_SUCCESS";
+export const CHANNEL_DETAILS_FAIL = "CHANNEL_DETAILS_FAIL";
+
+// channel SUBSCRIBE
+export const SET_SUBSCRIBES_STATUS = "SET_SUBSCRIBES_STATUS";
+
+// channel comments request
+export const COMMENTS_REQUEST = "COMMENTS_REQUEST";
+export const COMMENTS_SUCCESS = "COMMENTS_SUCCESS";
+export const COMMENTS_FAIL = "COMMENTS_FAIL";
+
+// insert comments
+export const ADD_COMMENT_SUCCESS = "ADD_COMMENT_SUCCESS";
+export const ADD_COMMENT_FAIL = "ADD_COMMENT_FAIL";
+
+// get related video request
+export const RELATED_VIDEO_REQUEST = "RELATED_VIDEO_REQUEST";
+export const RELATED_VIDEO_SUCCESS = "RELATED_VIDEO_SUCCESS";
+export const RELATED_VIDEO_FAIL = "RELATED_VIDEO_FAIL";
+
+// get search video request
+export const SEARCHED_VIDEO_REQUEST = "SEARCHED_VIDEO_REQUEST";
+export const SEARCHED_VIDEO_SUCCESS = "SEARCHED_VIDEO_SUCCESS";
+export const SEARCHED_VIDEO_FAIL = "SEARCHED_VIDEO_FAIL";
+
+// get subsctiption channel request
+export const SUBSCRIPTIONS_REQUEST = "SUBSCRIPTIONS_REQUEST";
+export const SUBSCRIPTIONS_SUCCESS = "SUBSCRIPTIONS_SUCCESS";
+export const SUBSCRIPTIONS_FAIL = "SUBSCRIPTIONS_FAIL";
+
+// get video by channel request
+export const CHANNEL_VIDEO_REQUEST = "CHANNEL_VIDEO_REQUEST";
+export const CHANNEL_VIDEO_SUCCESS = "CHANNEL_VIDEO_SUCCESS";
+export const CHANNEL_VIDEO_FAIL = "CHANNEL_VIDEO_FAIL";
