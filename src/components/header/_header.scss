@@ -80,6 +80,9 @@
     }
     form {
       flex: 1;
+      button {
+        padding: 0 1rem;
+      }
     }
     &__icons > *:not(img) {
       display: none;

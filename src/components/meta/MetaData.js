@@ -36,13 +36,13 @@ const MetaData = ({ video: { snippet, statistics }, videoId }) => {
             {numeral(viewCount).format("0.a")} Views .
             {moment(publishedAt).fromNow()}
           </span>
-          <div>
+          <div className="like">
             <span className="mx-2">
-              <MdThumbUp size={23} />
+              <MdThumbUp size={23} className="mx-1" />
               {numeral(likeCount).format("0.a")}
             </span>
             <span className="mx-2">
-              <MdThumbDown size={23} />
+              <MdThumbDown size={23} className="mx-1" />
               {numeral(dislikeCount).format("0.a")}
             </span>
           </div>

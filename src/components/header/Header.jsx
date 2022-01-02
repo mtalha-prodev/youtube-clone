@@ -5,6 +5,8 @@ import { MdNotifications, MdApps } from "react-icons/md";
 import "./_header.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { useEffect } from "react";
+import { useDispatch, useSelector, useStore } from "react-redux";
 
 const Header = ({ sidebarToggle }) => {
   const [input, setInput] = useState("");
@@ -15,6 +17,8 @@ const Header = ({ sidebarToggle }) => {
     e.preventDefault();
     navigate(`/search/${input}`);
   };
+
+  const { user } = useSelector((state) => state.auth);
 
   return (
     <div className="header">
@@ -43,10 +47,7 @@ const Header = ({ sidebarToggle }) => {
       <div className="header__icons">
         <MdNotifications size={28} />
         <MdApps size={28} />
-        <img
-          src="http://user.dobe3.com/2be3/assets/global/images/avatars/avatar1.png"
-          alt="avatar"
-        />
+        <img src={user?.picture} alt="avatar" />
       </div>
     </div>
   );

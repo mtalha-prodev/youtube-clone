@@ -79,20 +79,22 @@ const Video = ({ video, channelScreen }) => {
         <LazyLoadImage src={medium.url} effect="blur" />
         <span className="video__content__duration">{_duration}</span>
       </div>
-      <div className="video__title">{title}</div>
-      <div className="video__details">
-        <span>
-          <AiFillEye /> {numeral(views).format("0.a")} Views
-        </span>
-        <span>{moment(publishedAt).fromNow()}</span>
-      </div>
-      {/* channel name and img  */}
-      {!channelScreen && (
-        <div className="video__channel">
-          <LazyLoadImage src={channelIcon?.url} effect="blur" />
-          <p>{channelTitle}</p>
+      <div>
+        <div className="video__title">{title}</div>
+        <div className="video__details">
+          <span>
+            <AiFillEye /> {numeral(views).format("0.a")} Views •{" "}
+            {moment(publishedAt).fromNow()}
+          </span>
         </div>
-      )}
+        {/* channel name and img  */}
+        {!channelScreen && (
+          <div className="video__channel">
+            <LazyLoadImage src={channelIcon?.url} effect="blur" />
+            <p>{channelTitle}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

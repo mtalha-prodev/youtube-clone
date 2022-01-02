@@ -44,7 +44,7 @@ const HomeScreen = () => {
         className="row overflow-hidden"
       >
         {videos.map((video, i) => (
-          <Col key={i} lg={3} md={4}>
+          <Col key={i} sm={6} lg={3} md={4}>
             <Videos video={video} />
           </Col>
         ))}
