@@ -46,13 +46,13 @@ const ChannelVideo = () => {
       <Container>
         <Row className="mt-2">
           {!loading
-            ? videos.map((video) => (
-                <Col md={4} lg={3}>
+            ? videos.map((video, i) => (
+                <Col md={4} lg={3} key={i}>
                   <Video video={video} channelScreen />
                 </Col>
               ))
-            : [...Array(16)].map(() => (
-                <Col md={4} lg={3}>
+            : [...Array(16)].map((v, i) => (
+                <Col md={4} lg={3} key={i}>
                   <ContentLoader
                     speed={2}
                     width={400}

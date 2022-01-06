@@ -25,6 +25,7 @@ const Comments = ({ videoId, totalComments }) => {
   const _comments = comments?.map(
     (comment) => comment.snippet.topLevelComment.snippet
   );
+  const { user } = useSelector((state) => state.auth);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,10 +41,7 @@ const Comments = ({ videoId, totalComments }) => {
       <h5>{totalComments} Comments</h5>
 
       <div className="comments__form d-flex">
-        <img
-          src="http://user.dobe3.com/2be3/assets/global/images/avatars/avatar1.png"
-          alt="avatar"
-        />
+        <img src={user?.picture} alt="avatar" />
 
         <form onSubmit={handleSubmit}>
           <input

@@ -6,16 +6,16 @@ import {
   LOG_OUT,
 } from "../actionType";
 
-const localStorageGetToken = localStorage.getItem("ytc-access-token")
-  ? localStorage.getItem("ytc-access-token")
+const sessionStorageGetToken = sessionStorage.getItem("ytc-access-token")
+  ? sessionStorage.getItem("ytc-access-token")
   : null;
-const localStorageGetUser = localStorage.getItem("ytc-user")
-  ? JSON.parse(localStorage.getItem("ytc-user"))
+const sessionStorageGetUser = sessionStorage.getItem("ytc-user")
+  ? JSON.parse(sessionStorage.getItem("ytc-user"))
   : null;
 
 const initialState = {
-  accessToken: localStorageGetToken,
-  user: localStorageGetUser,
+  accessToken: sessionStorageGetToken,
+  user: sessionStorageGetUser,
   loading: false,
 };
 

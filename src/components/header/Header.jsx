@@ -5,8 +5,7 @@ import { MdNotifications, MdApps } from "react-icons/md";
 import "./_header.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { useEffect } from "react";
-import { useDispatch, useSelector, useStore } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Header = ({ sidebarToggle }) => {
   const [input, setInput] = useState("");
@@ -19,6 +18,7 @@ const Header = ({ sidebarToggle }) => {
   };
 
   const { user } = useSelector((state) => state.auth);
+  console.log(user);
 
   return (
     <div className="header">
